@@ -16,7 +16,7 @@ class Dict(collections.OrderedDict):
 def main():
     data = Dict()
     for line in sys.stdin:
-        line = line.rstrip()
+        line = line.rstrip('\n')
         [host, key] = line.split(' ', 1)
         data[key] += [host]
     for key, hosts in data.items():
