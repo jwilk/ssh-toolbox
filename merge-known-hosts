@@ -20,7 +20,7 @@ def main():
         [host, key] = line.split(' ', 1)
         data[key] += [host]
     for key, hosts in data.items():
-        print(','.join(hosts), key)
+        print(str.join(',', hosts), key)
 
 if __name__ == '__main__':
     main()
